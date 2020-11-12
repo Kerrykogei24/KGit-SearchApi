@@ -119,6 +119,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "KGit-SearchAPI"
+    }
+  },
+  "defaultProject": "KGit-SearchAPI",
+  "cli": {
+    "analytics": "5a7e0fc4-c664-41a2-ad33-e5133180e775"
+  }
 }
