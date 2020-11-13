@@ -25,7 +25,7 @@ export class UserDataService {
       following :string;
       followings :string;
       public_repos:string;
-      name:string;
+      name:any;
       company:any;
       location:any;
       followers:any;
@@ -51,6 +51,9 @@ export class UserDataService {
         }
 
       );
+    
     });
+  
   }
+
 }

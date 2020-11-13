@@ -1,4 +1,6 @@
 export class User {
+
+
     avatar_url:any;
     name:any;
     company:any;
@@ -9,4 +11,6 @@ export class User {
     email:string;
     bio:any;
     login:any;
+    constructor(){}
+  
 }
