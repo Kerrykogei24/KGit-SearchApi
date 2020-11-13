@@ -5,11 +5,13 @@ import {HttpClientModule} from '@angular/common/http';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { from } from 'rxjs';
+import { SearchUserComponent } from './search-user/search-user.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
+    SearchUserComponent,
 
   ],
   imports: [
