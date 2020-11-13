@@ -1,8 +1,10 @@
+import { environment } from './../environments/environment';
 import { Repos } from './repos';
 import { User } from './user';
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { promise } from 'protractor';
+import { error } from 'console';
 
 
 
@@ -12,6 +14,9 @@ import { promise } from 'protractor';
 export class UserDataService {
 user:User[]=[];
 repo:Repos[]=[];
+
+apiURL= 'https://api.github.com/users/';
+token=`?access_token=${environment.apiKey}`
   constructor(private http:HttpClient) { }
 
   searchUser(searchTerm:string){
@@ -29,7 +34,16 @@ repo:Repos[]=[];
     return new Promise((resolve,reject)=>{
       this.user=[];
 
-      this.http.get<data>(this.)
+      this.http.get<data>(this.apiURL+ searchTerm+ this.token).toPromise().then(
+(results) =>{
+  this.user.push(results);
+  resolve();
+},
+(error)=>{
+  reject();
+}
+
+      )
     })
   }
 }
