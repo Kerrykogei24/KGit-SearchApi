@@ -7,6 +7,7 @@ import { AppComponent } from './app.component';
 import { from } from 'rxjs';
 import { SearchUserComponent } from './search-user/search-user.component';
 import { UserDataComponent } from './user-data/user-data.component';
+import { RepoComponent } from './repo/repo.component';
 
 
 @NgModule({
@@ -14,6 +15,7 @@ import { UserDataComponent } from './user-data/user-data.component';
     AppComponent,
     SearchUserComponent,
     UserDataComponent,
+    RepoComponent,
 
   ],
   imports: [

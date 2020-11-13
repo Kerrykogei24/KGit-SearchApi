@@ -5,4 +5,10 @@
     <a href="#">
         <img src="{{detail.avatar_url}}" alt="">
     </a>
+    <p>{{detail.following}}</p>
+</div>
+
+
+<div *ngFor='let repo of myRepo'>
+    <p>{{repo.name}}</p>
 </div>
