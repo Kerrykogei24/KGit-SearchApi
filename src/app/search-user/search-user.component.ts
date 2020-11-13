@@ -13,7 +13,7 @@ searchTerm:string;
 emmitUser(){
   this.searchEmitter.emit(this.searchTerm);
 }
-  ngOnInit(): void {
+  ngOnInit(){
   }
 
 }

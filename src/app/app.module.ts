@@ -6,12 +6,14 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { from } from 'rxjs';
 import { SearchUserComponent } from './search-user/search-user.component';
+import { UserDataComponent } from './user-data/user-data.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     SearchUserComponent,
+    UserDataComponent,
 
   ],
   imports: [

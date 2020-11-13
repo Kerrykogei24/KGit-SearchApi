@@ -1,0 +1,6 @@
+<app-search-user (searchEmitter)='getSearchedUser($event)'></app-search-user>
+
+<div *ngFor='let detail of user'>
+    <h1>{{detail.login}}</h1>
+
+</div>
