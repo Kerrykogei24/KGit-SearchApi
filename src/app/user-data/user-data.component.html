@@ -1,20 +1,52 @@
 <div class="container-fluid">
 
     <app-search-user (searchEmitter)='getSearchedUser($event)'></app-search-user>
+
     <div class="row">
+
         <div class="col-md-4">
             <div *ngFor='let detail of user'>
-                <h1>{{detail.login}}</h1>
-                <a href="#">
-                    <img src="{{detail.avatar_url}}" alt="">
-                </a>
-                <p>{{detail.following}}</p>
-                <p>{{detail.followers}}</p>
+                <div class="card">
+                    <a href="#">
+                        <img src="{{detail.avatar_url}}" alt="" class="img-circle person">
+                    </a>
+                    <div class="cardp">
+                        <div class="card-body">
+                            <h5 class="card-title">{{detail.name}}</h5>
+                            <p class="card-text">{{detail.login}}</p>
+                            <p class="card-text">{{detail.bio}}</p>
+                            <p class="card-text">{{detail.company}}</p>
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <p class="card-text"><i class="fas fa-user-plus"></i>{{detail.followers}} <small>FOLLOWERS</small> </p>
+                                </div>
+                                <div class="col-md-4">
+                                    <p class="card-text">{{detail.following}} <small>FOLLOWING</small> </p>
+                                </div>
+                                <div class="col-md-4">
+                                    <p class="card-text">{{detail.created_at|date}}</p>
+                                </div>
+                            </div>
+                            <a href="{{detail.html_url}}" target="_blank" class="btn btn-outline-warning"><small>GITHUB</small></a>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
+        <!-- <div class="row">
+            <div class="col-md-4">
+                <div *ngFor='let detail of user '>
+                    <h1>{{detail.login}}</h1>
+                    <a href="#">
+                        <img src="{{detail.avatar_url}}" alt="">
+                    </a>
+                    <p>{{detail.following}}</p>
+                    <p>{{detail.followers}}</p>
+                </div>
+            </div> -->
 
 
-        <!-- <div *ngFor='let repo of myRepo'>
+        <!-- <div *ngFor='let repo of myRepo '>
         <p>{{repo.name}}</p>
         <p>{{repo.description}}</p>
         <p>{{repo.updated_at}}</p>
@@ -23,7 +55,7 @@
 
         <div class="col-md-6">
             <div class="card-repo">
-                <div *ngFor='let repo of myRepo'>
+                <div *ngFor='let repo of myRepo '>
                     <div class="card text-center">
                         <div class="card-header">
                             Popular repositories
