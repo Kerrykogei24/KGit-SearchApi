@@ -1,18 +1,21 @@
-<app-search-user (searchEmitter)='getSearchedUser($event)'></app-search-user>
+<div class="container-fluid">
+    <app-search-user (searchEmitter)='getSearchedUser($event)'>
+    </app-search-user>
 
-<div *ngFor='let detail of user'>
-    <h1>{{detail.login}}</h1>
-    <a href="#">
-        <img src="{{detail.avatar_url}}" alt="">
-    </a>
-    <p>{{detail.following}}</p>
-    <p>{{detail.followers}}</p>
-</div>
+    <div *ngFor='let detail of user'>
+        <h1>{{detail.login}}</h1>
+        <a href="#">
+            <img src="{{detail.avatar_url}}" alt="">
+        </a>
+        <p>{{detail.following}}</p>
+        <p>{{detail.followers}}</p>
+    </div>
 
 
-<div *ngFor='let repo of myRepo'>
-    <p>{{repo.name}}</p>
-    <p>{{repo.description}}</p>
-    <p>{{repo.updated_at}}</p>
-    <p>{{repo.updated_at}}</p>
+    <div *ngFor='let repo of myRepo'>
+        <p>{{repo.name}}</p>
+        <p>{{repo.description}}</p>
+        <p>{{repo.updated_at}}</p>
+        <p>{{repo.updated_at}}</p>
+    </div>
 </div>
