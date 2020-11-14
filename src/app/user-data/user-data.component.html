@@ -61,6 +61,7 @@
     </div> -->
 
         <div class="col-md-6">
+
             <div class="card-repo">
                 <div *ngFor='let repo of myRepo '>
                     <div class="card text-center">
@@ -68,12 +69,18 @@
                             Popular repositories
                         </div>
                         <div class="card-body">
-                            <h5 class="card-title">{{repo.name}}</h5>
+                            <a href="{{repo.html_url}}">
+                                <h5 class="card-title">{{repo.name}}</h5>
+                            </a>
                             <p class="card-text">{{repo.description}}</p>
+
+                            <p class="card-text">{{repo.pushed_at|date}}</p>
                             <a href="#" class="btn btn-primary">{{repo.language}}</a>
+                            <button class="btn btn-secondary">{{repo.forks_count}}</button>
+
                         </div>
                         <div class="card-footer text-muted">
-                            {{repo.updated_at}}
+                            <p class="card-text">{{repo.created_at|date}}</p>
                         </div>
                     </div>
                 </div>
