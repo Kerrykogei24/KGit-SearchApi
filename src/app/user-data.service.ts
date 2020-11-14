@@ -32,7 +32,7 @@ export class UserDataService {
       logged_at:Date;
       email:any;
       bio:any;
-
+      created_at:Date;
     }
 
 

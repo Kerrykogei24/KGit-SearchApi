@@ -11,6 +11,7 @@ export class User {
     email:string;
     bio:any;
     login:any;
+    created_at:Date;
     constructor(){}
   
 }

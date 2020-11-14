@@ -15,7 +15,7 @@
                             <h5 class="card-title">{{detail.name}}</h5>
                             <p class="card-text">{{detail.login}}</p>
                             <p class="card-text">{{detail.bio}}</p>
-                            <p class="card-text"><i class="fa fa-building" aria-hidden="true"></i> {{detail.company}}</p>
+                            <button class="btn btn-secondary"> Follow </button>
                             <div class="row">
                                 <div class="col-md-4">
                                     <p class="card-text"><i class="fa fa-user-plus" aria-hidden="true"></i> {{detail.followers}} <small>FOLLOWERS</small>
@@ -25,9 +25,15 @@
                                     <p class="card-text">{{detail.following}} <small>FOLLOWING</small> </p>
                                 </div>
                                 <div class="col-md-4">
-                                    <p class="card-text">{{detail.created_at|date}}</p>
+
                                 </div>
+
                             </div>
+                            <p class="card-text"><i class="fa fa-building" aria-hidden="true" *ngIf='detail.company'></i> {{detail.company}}</p>
+                            <p class="card-text"><i class="fa fa-map-marker" aria-hidden="true" *ngIf='detail.location'></i> {{detail.location}}</p>
+                            <p class="card-text"><i class="fa fa-twitter" aria-hidden="true" *ngIf='detail.twitter_username'></i> {{detail.twitter_username}}</p>
+                            <p class="card-text"><i class="fa fa-calendar" aria-hidden="true"></i> Joined on: {{detail.created_at|date}}</p>
+                            <br>
                             <a href="{{detail.html_url}}" target="_blank" class="btn btn-outline-warning"><small>GITHUB</small></a>
                         </div>
                     </div>
