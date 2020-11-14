@@ -27,7 +27,7 @@ getSearchedUser(searchTerm){
     (success)=>{
       this.myRepo=success
       return(this.myRepo)
-        console.log(this.myRepo)
+        // console.log(this.myRepo)
     
       }
      
