@@ -1,7 +1,6 @@
 <div class="container-fluid">
 
-
-
+    <app-repo></app-repo>
     <app-search-user (searchEmitter)='getSearchedUser($event)'></app-search-user>
     <div class="row">
 
@@ -16,10 +15,11 @@
                             <h5 class="card-title">{{detail.name}}</h5>
                             <p class="card-text">{{detail.login}}</p>
                             <p class="card-text">{{detail.bio}}</p>
-                            <p class="card-text">{{detail.company}}</p>
+                            <p class="card-text"><i class="fa fa-building" aria-hidden="true"></i> {{detail.company}}</p>
                             <div class="row">
                                 <div class="col-md-4">
-                                    <p class="card-text"><i class="fas fa-user-plus"></i>{{detail.followers}} <small>FOLLOWERS</small> </p>
+                                    <p class="card-text"><i class="fa fa-user-plus" aria-hidden="true"></i> {{detail.followers}} <small>FOLLOWERS</small>
+                                    </p>
                                 </div>
                                 <div class="col-md-4">
                                     <p class="card-text">{{detail.following}} <small>FOLLOWING</small> </p>

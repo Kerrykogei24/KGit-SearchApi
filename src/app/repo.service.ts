@@ -1,3 +1,4 @@
+import { Repos } from './repos';
 import { environment } from './../environments/environment';
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
@@ -7,6 +8,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class RepoService {
+  repo:Repos[]=[];
   apiURL= 'https://api.github.com/users/';
   token=`?access_token=${environment.apiKey}`
 
