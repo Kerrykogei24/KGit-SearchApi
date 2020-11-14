@@ -8,6 +8,7 @@ import { AppComponent } from './app.component';
 import { SearchUserComponent } from './search-user/search-user.component';
 import { UserDataComponent } from './user-data/user-data.component';
 import { RepoComponent } from './repo/repo.component';
+import { NavComponent } from './nav/nav.component';
 
 
 @NgModule({
@@ -16,13 +17,15 @@ import { RepoComponent } from './repo/repo.component';
     SearchUserComponent,
     UserDataComponent,
     RepoComponent,
+    NavComponent,
 
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+ 
   ],
   providers: [],
   bootstrap: [AppComponent]

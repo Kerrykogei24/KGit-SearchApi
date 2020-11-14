@@ -1,0 +1,11 @@
+    nav {
+        background-color: #121212;
+        color: #fff;
+        text-decoration: none;
+    }
+    
+    .navbar-brand,
+    .navbar-toggler,
+    .nav-link {
+        color: #fff;
+    }
