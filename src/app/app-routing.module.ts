@@ -1,7 +1,13 @@
+import { UserDataComponent } from './user-data/user-data.component';
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
+import { RepoComponent } from './repo/repo.component';
 
-const routes: Routes = [];
+
+const routes: Routes = [
+  { path: 'user-data', component:UserDataComponent },
+  { path: 'repo', component:RepoComponent }
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
