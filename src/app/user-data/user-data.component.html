@@ -12,9 +12,9 @@
                     </a>
                     <div class="cardp">
                         <div class="card-body">
-                            <h5 class="card-title">{{detail.name}}</h5>
+                            <h5 class="card-title"><i class="fa fa-user-circle-o" aria-hidden="true"></i> {{detail.name}}</h5>
                             <p class="card-text">{{detail.login}}</p>
-                            <p class="card-text">{{detail.bio}}</p>
+                            <p class="card-text"><i class="fa fa-address-book" aria-hidden="true" *ngIf='detail.bio'></i> {{detail.bio}}</p>
                             <hr>
                             <button class="btn btn-secondary"> Follow </button>
                             <div class="row">
@@ -66,9 +66,9 @@
         <div class="col-md-6">
             <h1>REPOSITORIES.</h1>
             <hr>
-            <div class="card-repo" appHighlight>
+            <div class="card-repo">
                 <div *ngFor='let repo of myRepo '>
-                    <div class="card text-center">
+                    <div class="card text-center" appHighlight>
                         <div class="card-header">
                             <a href="{{repo.html_url}}">
                                 <h5 class="card-title">{{repo.name}}</h5>
