@@ -11,6 +11,7 @@ import { RepoComponent } from './repo/repo.component';
 import { NavComponent } from './nav/nav.component';
 import { DateAgoPipe } from './pipes/date-ago.pipe';
 import { HighlightDirective } from './highlight.directive';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 
 @NgModule({
@@ -22,6 +23,7 @@ import { HighlightDirective } from './highlight.directive';
     NavComponent,
     DateAgoPipe,
     HighlightDirective,
+    NotFoundComponent,
 
   ],
   imports: [
