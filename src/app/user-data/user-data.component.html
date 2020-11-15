@@ -5,39 +5,45 @@
     <div class="row">
 
         <div class="col-md-4">
-            <div *ngFor='let detail of user'>
-                <div class="card">
-                    <a href="#">
-                        <img src="{{detail.avatar_url}}" alt="" class="img-circle person">
-                    </a>
-                    <div class="cardp">
-                        <div class="card-body">
-                            <h5 class="card-title"><i class="fa fa-user-circle-o" aria-hidden="true"></i> {{detail.name}}</h5>
-                            <p class="card-text">{{detail.login}}</p>
-                            <p class="card-text"><i class="fa fa-address-book" aria-hidden="true" *ngIf='detail.bio'></i> {{detail.bio}}</p>
-                            <hr>
-                            <button class="btn btn-secondary"> Follow </button>
-                            <div class="row">
-                                <div class="col-md-4">
-                                    <p class="card-text"><i class="fa fa-user-plus" aria-hidden="true"></i> {{detail.followers}} <small>FOLLOWERS</small>
-                                    </p>
-                                </div>
-                                <div class="col-md-4">
-                                    <p class="card-text">{{detail.following}} <small>FOLLOWING</small> </p>
-                                </div>
-                                <div class="col-md-4">
-                                    <p class="card-text">{{detail.stargazers_count}} <i class="fa fa-star" aria-hidden="true"></i>
-                                    </p>
-                                </div>
+            <div class="jumbotron joker">
 
+                <div *ngFor='let detail of user'>
+
+                    <div class="card">
+                        <a href="#">
+                            <img src="{{detail.avatar_url}}" alt="" class="img-circle person">
+                        </a>
+                        <div class="cardp">
+                            <div class="jumbotron">
+                                <div class="card-body">
+                                    <h5 class="card-title"><i class="fa fa-user-circle-o" aria-hidden="true"></i> {{detail.name}}</h5>
+                                    <p class="card-text">{{detail.login}}</p>
+                                    <p class="card-text"><i class="fa fa-address-book" aria-hidden="true" *ngIf='detail.bio'></i> {{detail.bio}}</p>
+                                    <hr>
+                                    <button class="btn btn-secondary"> Follow </button>
+                                    <div class="row">
+                                        <div class="col-md-4">
+                                            <p class="card-text"><i class="fa fa-user-plus" aria-hidden="true"></i> {{detail.followers}} <small>FOLLOWERS</small>
+                                            </p>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <p class="card-text">{{detail.following}} <small>FOLLOWING</small> </p>
+                                        </div>
+                                        <div class="col-md-4">
+                                            <p class="card-text">{{detail.stargazers_count}} <i class="fa fa-star" aria-hidden="true"></i>
+                                            </p>
+                                        </div>
+
+                                    </div>
+                                    <hr>
+                                    <p class="card-text"><i class="fa fa-building" aria-hidden="true" *ngIf='detail.company'></i> {{detail.company}}</p>
+                                    <p class="card-text"><i class="fa fa-map-marker" aria-hidden="true" *ngIf='detail.location'></i> {{detail.location}}</p>
+                                    <p class="card-text"><i class="fa fa-twitter" aria-hidden="true" *ngIf='detail.twitter_username'></i> {{detail.twitter_username}}</p>
+                                    <p class="card-text"><i class="fa fa-calendar" aria-hidden="true"></i> Joined on: {{detail.created_at|date}}</p>
+                                    <br>
+                                    <a href="{{detail.html_url}}" target="_blank" class="btn btn-outline-warning"><small>GITHUB</small></a>
+                                </div>
                             </div>
-                            <hr>
-                            <p class="card-text"><i class="fa fa-building" aria-hidden="true" *ngIf='detail.company'></i> {{detail.company}}</p>
-                            <p class="card-text"><i class="fa fa-map-marker" aria-hidden="true" *ngIf='detail.location'></i> {{detail.location}}</p>
-                            <p class="card-text"><i class="fa fa-twitter" aria-hidden="true" *ngIf='detail.twitter_username'></i> {{detail.twitter_username}}</p>
-                            <p class="card-text"><i class="fa fa-calendar" aria-hidden="true"></i> Joined on: {{detail.created_at|date}}</p>
-                            <br>
-                            <a href="{{detail.html_url}}" target="_blank" class="btn btn-outline-warning"><small>GITHUB</small></a>
                         </div>
                     </div>
                 </div>

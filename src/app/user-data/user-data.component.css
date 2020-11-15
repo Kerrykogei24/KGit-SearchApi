@@ -22,7 +22,11 @@
     border-color: #f1f1f1;
 }
 
-.cardp {
+.jumbotron {
+    background-color: rgba(23, 25, 40, 0.8);
+}
+
+.cardp .jumbotron {
     background-color: #12121212;
 }
 
