@@ -30,10 +30,6 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 * cd KGit-SearchApi
 
 * code . or atom . based on the text editor you have.
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
 
 ## Technologies Used
 
@@ -43,11 +39,10 @@ Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.
 * markdown
 * [Bootstrap](https://github.com/topics/bootstrap)
 
+## Contact Information 
 
-## Running end-to-end tests
+If you have any question or contributions, please email me at [kerrykomar@gmail.com]
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## License
+* *MIT License:*
+* Copyright (c) 2020 **Kerrykogei**
