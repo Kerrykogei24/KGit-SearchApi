@@ -9,6 +9,7 @@ import { SearchUserComponent } from './search-user/search-user.component';
 import { UserDataComponent } from './user-data/user-data.component';
 import { RepoComponent } from './repo/repo.component';
 import { NavComponent } from './nav/nav.component';
+import { DateAgoPipe } from './pipes/date-ago.pipe';
 
 
 @NgModule({
@@ -18,6 +19,7 @@ import { NavComponent } from './nav/nav.component';
     UserDataComponent,
     RepoComponent,
     NavComponent,
+    DateAgoPipe,
 
   ],
   imports: [
