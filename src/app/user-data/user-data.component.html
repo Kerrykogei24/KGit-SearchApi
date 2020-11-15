@@ -15,6 +15,7 @@
                             <h5 class="card-title">{{detail.name}}</h5>
                             <p class="card-text">{{detail.login}}</p>
                             <p class="card-text">{{detail.bio}}</p>
+                            <hr>
                             <button class="btn btn-secondary"> Follow </button>
                             <div class="row">
                                 <div class="col-md-4">
@@ -25,10 +26,12 @@
                                     <p class="card-text">{{detail.following}} <small>FOLLOWING</small> </p>
                                 </div>
                                 <div class="col-md-4">
-
+                                    <p class="card-text">{{detail.stargazers_count}} <i class="fa fa-star" aria-hidden="true"></i>
+                                    </p>
                                 </div>
 
                             </div>
+                            <hr>
                             <p class="card-text"><i class="fa fa-building" aria-hidden="true" *ngIf='detail.company'></i> {{detail.company}}</p>
                             <p class="card-text"><i class="fa fa-map-marker" aria-hidden="true" *ngIf='detail.location'></i> {{detail.location}}</p>
                             <p class="card-text"><i class="fa fa-twitter" aria-hidden="true" *ngIf='detail.twitter_username'></i> {{detail.twitter_username}}</p>
@@ -61,26 +64,37 @@
     </div> -->
 
         <div class="col-md-6">
-
+            <h1>REPOSITORIES.</h1>
+            <hr>
             <div class="card-repo">
                 <div *ngFor='let repo of myRepo '>
                     <div class="card text-center">
                         <div class="card-header">
-                            Popular repositories
-                        </div>
-                        <div class="card-body">
                             <a href="{{repo.html_url}}">
                                 <h5 class="card-title">{{repo.name}}</h5>
                             </a>
+                        </div>
+                        <div class="card-body">
+
                             <p class="card-text">{{repo.description}}</p>
 
-                            <p class="card-text">{{repo.pushed_at|date}}</p>
-                            <a href="#" class="btn btn-primary">{{repo.language}}</a>
-                            <button class="btn btn-secondary">{{repo.forks_count}}</button>
+                            <p class="card-text">{{repo.language}}</p>
 
+
+                            <p class="card-text">{{repo.created_at|date}}</p>
                         </div>
                         <div class="card-footer text-muted">
-                            <p class="card-text">{{repo.created_at|date}}</p>
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <a href="#" class="btn btn-outline-secondary"><i class="fa fa-eye" aria-hidden="true"></i> {{repo.watchers}}</a>
+                                </div>
+                                <div class="col-md-3">
+                                    <button class="btn btn-outline-secondary"><i class="fa fa-code-fork" aria-hidden="true"></i> {{repo.forks_count}}</button>
+                                </div>
+                                <div class="col-md-6">
+                                    <a href="{{repo.html_url}}"> <button class="btn btn-outline-secondary">CLICK TO VIEW</button></a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
