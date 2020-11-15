@@ -43,25 +43,6 @@
                 </div>
             </div>
         </div>
-        <!-- <div class="row">
-            <div class="col-md-4">
-                <div *ngFor='let detail of user '>
-                    <h1>{{detail.login}}</h1>
-                    <a href="#">
-                        <img src="{{detail.avatar_url}}" alt="">
-                    </a>
-                    <p>{{detail.following}}</p>
-                    <p>{{detail.followers}}</p>
-                </div>
-            </div> -->
-
-
-        <!-- <div *ngFor='let repo of myRepo '>
-        <p>{{repo.name}}</p>
-        <p>{{repo.description}}</p>
-        <p>{{repo.updated_at}}</p>
-        <p>{{repo.updated_at}}</p>
-    </div> -->
 
         <div class="col-md-6">
             <h1>REPOSITORIES.</h1>
@@ -78,7 +59,7 @@
 
                             <p class="card-text">{{repo.description}}</p>
 
-                            <p class="card-text">{{repo.language}}</p>
+                            <p class="card-text"><i class="fa fa-file-code-o" aria-hidden="true" *ngIf='repo.language'></i> {{repo.language}}</p>
 
 
                             <p class="card-text">CREATED: {{repo.created_at|dateAgo}}</p>

@@ -1,32 +1,37 @@
 <div class="container-fluid">
+    <h1>REPOSITORIES.</h1>
     <app-search-user (searchEmitter)='getSearchedUser($event)'></app-search-user>
-    <div class="card-repo">
-        <div *ngFor='let repo of myRepo '>
-            <div class="card text-center" appHighlight>
-                <div class="card-header">
-                    <a href="{{repo.html_url}}">
-                        <h5 class="card-title">{{repo.name}}</h5>
-                    </a>
-                </div>
-                <div class="card-body">
-
-                    <p class="card-text">{{repo.description}}</p>
-
-                    <p class="card-text">{{repo.language}}</p>
-
-
-                    <p class="card-text">CREATED: {{repo.created_at|dateAgo}}</p>
-                </div>
-                <div class="card-footer text-muted">
-                    <div class="row">
-                        <div class="col-md-3">
-                            <a href="#" class="btn btn-outline-secondary"><i class="fa fa-eye" aria-hidden="true"></i> {{repo.watchers}}</a>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="card-repo">
+                <div *ngFor='let repo of myRepo '>
+                    <div class="card text-center" appHighlight>
+                        <div class="card-header">
+                            <a href="{{repo.html_url}}">
+                                <h5 class="card-title">{{repo.name}}</h5>
+                            </a>
                         </div>
-                        <div class="col-md-3">
-                            <button class="btn btn-outline-secondary"><i class="fa fa-code-fork" aria-hidden="true"></i> {{repo.forks_count}}</button>
+                        <div class="card-body">
+
+                            <p class="card-text">{{repo.description}}</p>
+
+                            <p class="card-text"><i class="fa fa-file-code-o" aria-hidden="true" *ngIf='repo.language'></i> {{repo.language}}</p>
+
+
+                            <p class="card-text">CREATED: {{repo.created_at|dateAgo}}</p>
                         </div>
-                        <div class="col-md-6">
-                            <a href="{{repo.html_url}}"> <button class="btn btn-outline-secondary">CLICK TO VIEW</button></a>
+                        <div class="card-footer text-muted">
+                            <div class="row">
+                                <div class="col-md-3">
+                                    <a href="#" class="btn btn-outline-secondary"><i class="fa fa-eye" aria-hidden="true"></i> {{repo.watchers}}</a>
+                                </div>
+                                <div class="col-md-3">
+                                    <button class="btn btn-outline-secondary"><i class="fa fa-code-fork" aria-hidden="true"></i> {{repo.forks_count}}</button>
+                                </div>
+                                <div class="col-md-6">
+                                    <a href="{{repo.html_url}}"> <button class="btn btn-outline-secondary">CLICK TO VIEW</button></a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>

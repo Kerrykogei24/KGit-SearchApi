@@ -1,0 +1,15 @@
+.card-repo {
+    display: grid;
+    grid-template-columns: 350px 350px 350px 350px;
+    width: 100%;
+    margin: auto auto auto auto;
+}
+
+.card {
+    max-width: 380px;
+    max-height: 300vh;
+}
+
+.fa-file-code-o {
+    color: red;
+}
